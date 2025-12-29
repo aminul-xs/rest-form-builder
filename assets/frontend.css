@@ -1,0 +1,415 @@
+/* WordPress Form Builder - Frontend Styles */
+
+/* Form Wrapper */
+.rest-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Form Container */
+.rest-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title (if added) */
+.rest-form h2 {
+    margin: 0 0 32px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+}
+
+/* Form Field */
+.form-field {
+    margin-bottom: 24px;
+}
+
+.form-field:last-of-type {
+    margin-bottom: 32px;
+}
+
+/* Labels */
+.form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.form-field .required {
+    color: #ef4444;
+    margin-left: 2px;
+    font-weight: 700;
+}
+
+/* Text Inputs */
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea,
+.form-field select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #111827;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="email"]:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-field input[type="text"]:hover:not(:focus),
+.form-field input[type="email"]:hover:not(:focus),
+.form-field textarea:hover:not(:focus),
+.form-field select:hover:not(:focus) {
+    border-color: #d1d5db;
+}
+
+/* Error State */
+.form-field input.error,
+.form-field textarea.error,
+.form-field select.error {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.form-field input.error:focus,
+.form-field textarea.error:focus,
+.form-field select.error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Placeholder */
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* Textarea */
+.form-field textarea {
+    min-height: 120px;
+    max-height: 400px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Select Dropdown */
+.form-field select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    padding-right: 44px;
+}
+
+.form-field select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Radio Buttons */
+.form-field .radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.form-field .radio-option:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+.form-field .radio-option:has(input:checked) {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.form-field .radio-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.form-field .radio-option label {
+    margin: 0 0 0 12px;
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Checkboxes */
+.form-field .checkbox-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.form-field .checkbox-option:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+.form-field .checkbox-option:has(input:checked) {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.form-field .checkbox-option input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.form-field .checkbox-option label {
+    margin: 0 0 0 12px;
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 32px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #3b82f6;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+    width: 100%;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Form Messages */
+.form-message {
+    margin-top: 24px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 2px solid #6ee7b7;
+}
+
+.form-message.success::before {
+    content: "✓ ";
+    font-weight: 700;
+}
+
+.form-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 2px solid #fca5a5;
+}
+
+.form-message.error::before {
+    content: "✗ ";
+    font-weight: 700;
+}
+
+/* Loading State */
+.submit-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.submit-btn.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rest-form-wrapper {
+        padding: 16px;
+    }
+    
+    .rest-form {
+        padding: 24px;
+        border-radius: 8px;
+    }
+    
+    .rest-form h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .form-field {
+        margin-bottom: 20px;
+    }
+    
+    .form-field input[type="text"],
+    .form-field input[type="email"],
+    .form-field textarea,
+    .form-field select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .submit-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rest-form {
+        padding: 20px;
+    }
+    
+    .form-field .radio-option,
+    .form-field .checkbox-option {
+        padding: 10px 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .rest-form-wrapper {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .rest-form {
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+    }
+    
+    .form-actions {
+        display: none;
+    }
+    
+    .form-message {
+        display: none;
+    }
+}
+
+/* Accessibility Improvements */
+.form-field input:focus-visible,
+.form-field textarea:focus-visible,
+.form-field select:focus-visible {
+    outline: 3px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+.submit-btn:focus-visible {
+    outline: 3px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Custom Animations */
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea,
+.form-field select {
+    animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scrolling for Long Forms */
+.rest-form-wrapper {
+    scroll-behavior: smooth;
+}
